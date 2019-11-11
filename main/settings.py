@@ -124,3 +124,8 @@ STATIC_URL = '/static/'
 # Google Auth config
 from pydrive.auth import GoogleAuth
 GoogleAuth.DEFAULT_SETTINGS['client_config_file']='media/credentials/client_secrets.json'
+
+
+# Heroku configs
+import django_heroku
+django_heroku.settings(locals())
