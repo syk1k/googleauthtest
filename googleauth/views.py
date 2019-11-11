@@ -8,7 +8,7 @@ from pydrive.auth import GoogleAuth
 class GoogleAuthView(views.View):
     def get(self, request, *args, **kwargs):
         gauth = GoogleAuth()
-        gauth.LocalWebserverAuth(host_name='https://googleauthtest.herokuapp.com')
+        gauth.LocalWebserverAuth(host_name='https://googleauthtest.herokuapp.com', port_numbers=[])
         return HttpResponse('GET request!')
 
     def post(self, request, *args, **kwargs):
